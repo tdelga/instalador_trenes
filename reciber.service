@@ -1,0 +1,5 @@
+[Unit] Description= reader script
+
+[Service] ExecStart=/home/user/instalador_trenes/start_rs232.sh
+
+[Install] WantedBy=multi-user.target

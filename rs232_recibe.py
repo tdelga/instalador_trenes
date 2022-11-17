@@ -6,9 +6,7 @@ import os
 serBarCode = serial.Serial('/dev/pts/2', 9600, timeout=1)
 
 while True:
-
     #read data from serial port
-        
         if(serBarCode.read(4) != b""):
                 serBarCode.close()
                 os.system("shutdown now")
