@@ -2,4 +2,4 @@
 
 pip install pyserial
 sleep 15
-python rs232_recibe.py
+python3 rs232_recibe.py
