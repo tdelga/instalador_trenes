@@ -1,0 +1,8 @@
+[Unit]
+Description= reader script
+
+[Service]
+ExecStart=/home/user/LECTOR_RFID/start_lector.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,11 +1,31 @@
+SERVICIO LECTOR RFID
+
+Requerimientos
+
+1- Conexion LAN en PRIMER puerto
+
+2- IPv4 manual LAN 192.168.1.201
+
 Configuracion y Ejecucion
 
-1- Descarga el proyecto en /home/user/instalador_trenes
+- En el archivo config.properties ingresar los parametros correspondientes segun la cabina e ip publica del servidor
 
-2- Otorga permisos completos al directorio
+- Ejecutar comando sudo ./instalador.sh
 
-2- Crear archivo de servicio en la ruta /etc/systemd/system/ llamado reciber.service con siguiente contenido (template en el repo)
+Esto ejecuta una serie de comandos de forma automatica:
 
-4- systemctl enable reciber , esto habilita el servicio para el booteo
+1- Crea el proyecto LECTOR_RFID en /home/user/
 
-PARA TESTEO systemctl start reciber
+2- Instala Java JRE
+
+3- Instala Java JDK
+
+4- Otorga permisos completos al directorio
+
+5- Crear archivo de servicio /etc/systemd/system/reader.service para inicio al booteo de equipo
+
+6- systemctl enable reader , esto habilita el servicio para el booteo
+
+7- Crea servicio para el apagado de equipo por puerto serial
+
+Si todo salio correctamente el sistema lector queda configurado para iniciar en el inicio del equipo y enviar las lecturas al servidor.
