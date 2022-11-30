@@ -3,11 +3,18 @@
 
 import serial
 import os
-serBarCode = serial.Serial('/dev/pts/2', 9600, timeout=1)
+import time
+from serial import SerialException
+
 
 while True:
-    #read data from serial port
+    try:
+        serBarCode = serial.Serial('/dev/pts/2', 9600, timeout=1)
+        #read data from serial port
         if(serBarCode.read(4) != b""):
-                serBarCode.close()
-                os.system("shutdown now")
+            serBarCode.close()
+            os.system("shutdown now")
+    except SerialException:
+        print("Error al escuchar el puerto serial")
+        time.sleep(1)
 
