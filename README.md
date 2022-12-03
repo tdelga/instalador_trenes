@@ -28,6 +28,8 @@ Esto ejecuta una serie de comandos de forma automatica:
 
 8- Crea servicio para el apagado de equipo por puerto serial
 
+9- Cambia IP de puerto LAN
+
 Configuracion final
 
 - En el archivo config.properties ingresar los parametros correspondientes segun la cabina e ip publica del servidor
