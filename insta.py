@@ -1,7 +1,7 @@
 
 import os
 
-directory = '/home/fran/'
+directory = '/home/user/'
 
 try:
 
