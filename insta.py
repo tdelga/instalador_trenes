@@ -7,7 +7,7 @@ try:
 
   # 0
   print('Iniciando proceso de instalacion')
-  os_cmd = ' apt install git'
+  os_cmd = ' apt install git -y'
   if os.system(os_cmd) != 0:
     raise Exception()
   print("Instalacion iniciada")
@@ -81,7 +81,7 @@ try:
 
   # 9
   print('9/9 - Configurando IP puerto LAN')
-  os_cmd = 'ip addr add 192.168.1.201/24 dev enp2s0'
+  os_cmd = 'ip addr add 192.168.1.201/24 dev enp1s0'
   if os.system(os_cmd) != 0:
       raise Exception()
   print(" 9/9 - IP configurada exitosamente")
