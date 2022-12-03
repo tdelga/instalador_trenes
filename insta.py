@@ -4,6 +4,14 @@ import os
 directory = '/home/fran/'
 
 try:
+
+  # 0
+  print('Iniciando proceso de instalacion')
+  os_cmd = ' apt install git'
+  if os.system(os_cmd) != 0:
+    raise Exception()
+  print("Instalacion iniciada")
+  print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     
   # 1
   if(not os.path.isdir(directory + 'LECTOR_RFID')):
