@@ -6,11 +6,9 @@ Requerimientos
 
 2- IPv4 manual LAN 192.168.1.201
 
-Configuracion y Ejecucion
+Para correr el instalador ejecute el comando:
 
-- En el archivo config.properties ingresar los parametros correspondientes segun la cabina e ip publica del servidor
-
-- Ejecutar comando sudo ./instalador.sh
+sudo python3 insta.py
 
 Esto ejecuta una serie de comandos de forma automatica:
 
@@ -26,6 +24,12 @@ Esto ejecuta una serie de comandos de forma automatica:
 
 6- systemctl enable reader , esto habilita el servicio para el booteo
 
-7- Crea servicio para el apagado de equipo por puerto serial
+7- Instala librerias para el apagado de equipo por puerto serial
+
+8- Crea servicio para el apagado de equipo por puerto serial
+
+Configuracion final
+
+- En el archivo config.properties ingresar los parametros correspondientes segun la cabina e ip publica del servidor
 
 Si todo salio correctamente el sistema lector queda configurado para iniciar en el inicio del equipo y enviar las lecturas al servidor.
