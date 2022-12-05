@@ -5,7 +5,7 @@ import serial
 import os
 import time
 from serial import SerialException
-print(12)
+
 
 while True:
     try:
