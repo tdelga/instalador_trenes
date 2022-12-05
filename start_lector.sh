@@ -1,6 +1,6 @@
 #!/bin/bash
 cd  /home/user/LECTOR_RFID/
-
+echo "Checkeando si hay un update"
 git remote update 
 
 sleep 5
