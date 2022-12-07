@@ -40,7 +40,7 @@ try:
 
   # 4
   print('4/9 - Otorgando permisos completos al directorio')
-  os_cmd = 'chmod 777 ' + directory + 'LECTOR_RFID'
+  os_cmd = 'chmod 777 -R ' + directory + 'LECTOR_RFID'
   if os.system(os_cmd) != 0:
       raise Exception()
   print(" 4/9 - Otorgados permisos completos al directorio exitosamente")
