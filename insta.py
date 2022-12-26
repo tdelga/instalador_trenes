@@ -17,10 +17,14 @@ try:
   if(not os.path.isdir(directory + 'LECTOR_RFID')):
     print('1/9 - Clonando respositorio LECTOR_RFID para iniciar instalacion')
     os_cmd = ' git clone https://github.com/tdelga/instalador_trenes.git ' + directory + 'LECTOR_RFID'
+    os_cmd2 = ' git config --global --add safe.directory ' + directory + 'LECTOR_RFID'
     if os.system(os_cmd) != 0:
+        raise Exception()
+    if os.system(os_cmd2) != 0:
         raise Exception()
     print("1/9- Proyecto clonado exitosamente")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+
 
   # 2
   print('2/9 - Instalando Java JRE')
@@ -40,7 +44,7 @@ try:
 
   # 4
   print('4/9 - Otorgando permisos completos al directorio')
-  os_cmd = 'chmod 777 -R ' + directory + 'LECTOR_RFID'
+  os_cmd = 'chmod 777 -R ' + directory + 'LECTOR_RFID ./.[!.]*'
   if os.system(os_cmd) != 0:
       raise Exception()
   print(" 4/9 - Otorgados permisos completos al directorio exitosamente")
