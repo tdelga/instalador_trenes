@@ -1,5 +1,6 @@
 SERVICIO LECTOR RFID V2
 
+
 Requerimientos( no para instalacion, sino funcionamiento)
 
 1- Conexion LAN en PRIMER puerto LAN (enp1s0)
