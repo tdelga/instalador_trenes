@@ -1,4 +1,5 @@
-SERVICIO LECTOR RFID
+SERVICIO LECTOR RFID V2
+
 
 Requerimientos( no para instalacion, sino funcionamiento)
 

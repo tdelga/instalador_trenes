@@ -18,7 +18,10 @@ if [ $LOCAL = $REMOTE ]; then
     echo Servicio levantado
 elif [ $LOCAL = $BASE ]; then
     echo "Need to pull"
-    git pull https://github.com/tdelga/instalador_trenes.git
+    git reset --hard HEAD
+    sleep 2
+    git pull origin main
+    sleep 5
     systemctl restart reader
 else
     echo "Diverged"
