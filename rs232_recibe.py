@@ -18,9 +18,7 @@ while True:
 
         # Check if the desired amount of time has passed
         if time_passed > time_to_check:
-            print("REINICIANDO")
-        break
-        print("EJECUTANDO")
+            break
         #read data from serial port
         if(serBarCode.read(4) != b""):
             serBarCode.close()
@@ -28,3 +26,6 @@ while True:
     except SerialException:
         print("Error al escuchar el puerto serial")
         time.sleep(1)
+
+print("REINICIANDO SERVICIO DESPUES DE 6 HORAS")
+# os.system("systemctl restart reader")
