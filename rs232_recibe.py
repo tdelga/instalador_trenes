@@ -11,14 +11,13 @@ start_time = time.time()
 
 while True:
     try:
+        # Get the current time
+        current_time = time.time()
+        time_passed = current_time - start_time
         # Check if the desired amount of time has passed
         if time_passed > time_to_check:
             break
         serBarCode = serial.Serial('/dev/pts/2', 9600, timeout=1)
-        # Get the current time
-        current_time = time.time()
-        time_passed = current_time - start_time
-
         #read data from serial port
         if(serBarCode.read(4) != b""):
             serBarCode.close()
