@@ -6,19 +6,19 @@ import os
 import time
 from serial import SerialException
 
-time_to_check = 10
+time_to_check = 21600
 start_time = time.time()
 
 while True:
     try:
+        # Check if the desired amount of time has passed
+        if time_passed > time_to_check:
+            break
         serBarCode = serial.Serial('/dev/pts/2', 9600, timeout=1)
         # Get the current time
         current_time = time.time()
         time_passed = current_time - start_time
 
-        # Check if the desired amount of time has passed
-        if time_passed > time_to_check:
-            break
         #read data from serial port
         if(serBarCode.read(4) != b""):
             serBarCode.close()
@@ -28,4 +28,4 @@ while True:
         time.sleep(1)
 
 print("REINICIANDO SERVICIO DESPUES DE 6 HORAS")
-# os.system("systemctl restart reader")
+os.system("systemctl restart reader")
