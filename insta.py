@@ -16,7 +16,7 @@ try:
   # 1
   if(not os.path.isdir(directory + 'LECTOR_RFID')):
     print('1/9 - Clonando respositorio LECTOR_RFID para iniciar instalacion')
-    os_cmd = ' git clone https://github.com/tdelga/instalador_trenes.git ' + directory + 'LECTOR_RFID'
+    os_cmd = ' git clone https://github.com/Tyrrell01/Repositorio_01_RFID.git ' + directory + 'LECTOR_RFID'
     os_cmd2 = ' git config --global --add safe.directory ' + directory + 'LECTOR_RFID'
     if os.system(os_cmd) != 0:
         raise Exception()
@@ -80,18 +80,9 @@ try:
   os_cmd = 'pip3 install pyserial'
   if os.system(os_cmd) != 0:
       raise Exception()
-  print(" 8/9 - Servicio de apagado por puerto serial instalado configurado exitosamente")
+  print(" 9/9 - Servicio de apagado por puerto serial instalado configurado exitosamente")
   print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
-  # 9
-  print('9/9 - Configurando IP puerto LAN')
-  os_cmd = 'ip addr add 192.168.1.201/24 dev enp1s0'
-  if os.system(os_cmd) != 0:
-      raise Exception()
-  print(" 9/9 - IP configurada exitosamente")
-  print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-
-  print("Instalacion finalizada correctamente!")
 
 except:
   print("Instalacion abortada")

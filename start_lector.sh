@@ -2,7 +2,7 @@
 cd  /home/user/LECTOR_RFID/
 echo "Checkeando si hay un update"
 git remote update 
-ip addr add 192.168.1.201/24 dev enp1s0
+
 sleep 5
 
 UPSTREAM=${1:-'@{u}'}
